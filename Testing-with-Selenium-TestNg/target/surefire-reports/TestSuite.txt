@@ -1,4 +1,17 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 13.076 s - in TestSuite
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 3, Time elapsed: 9.094 s <<< FAILURE! - in TestSuite
+ai.iamneo.testing.Testing_Selenium_TestNg.AppTest.beforeTest  Time elapsed: 8.956 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+unknown error: session deleted because of page crash
+from tab crashed
+  (Session info: chrome=114.0.5735.133)
+Build info: version: '4.1.0', revision: '87802e897b'
+System info: host: 'cefafeabdaafddfddddfcbefbaaebdcffff-0', ip: '10.80.3.101', os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.107+', java.version: '11.0.18'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Command: [5552c4339e4bf2086925017215e1005e, get {url=https://flipkart.com/}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 114.0.5735.133, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: /tmp/.com.google.Chrome.eY9zM9}, goog:chromeOptions: {debuggerAddress: localhost:36599}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://10.80.3.101:4444/sessi..., se:cdpVersion: 114.0.5735.133, se:vnc: ws://10.80.3.101:4444/sessi..., se:vncEnabled: true, se:vncLocalAddress: ws://10.80.3.101:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5552c4339e4bf2086925017215e1005e
+	at ai.iamneo.testing.Testing_Selenium_TestNg.AppTest.beforeTest(AppTest.java:25)
+
