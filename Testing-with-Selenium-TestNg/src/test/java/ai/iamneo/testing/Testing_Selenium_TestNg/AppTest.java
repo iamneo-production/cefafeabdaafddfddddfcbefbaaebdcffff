@@ -2,7 +2,9 @@ package ai.iamneo.testing.Testing_Selenium_TestNg;
 
 import org.testng.annotations.Test;
 import java.net.URL;
-
+import java.util.List;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -15,49 +17,38 @@ public class AppTest {
 	ChromeOptions chromeOptions = new ChromeOptions();
 	WebDriver driver = null;
 
+
 	@BeforeTest
-	public void beforeTest() throws Exception
-	 {
+	public void beforeTest() throws Exception {
+		
 		driver = new RemoteWebDriver(new URL("http://localhost:4444"), chromeOptions);
+        driver.get("https://flipkart.com/");
+
 	}
 
 	@Test
-//Checking the title of iamNeo (Home - iamneo)
-	public void iamNeo() throws InterruptedException 
+	public void testcase_1() throws InterruptedException //Go to Ebay
 	{
-
-		 String title ="Get your title";
-		Assert.assertEquals(title, "");
-	}
-	@Test
-//Moving to FACEBOOK
-	public void nextPage() throws InterruptedException 
-	{
-		 	
-		 String title ="Get your title";
-		Assert.assertEquals(title, "");
+		List<WebElement> allLinks = driver.findElements(By.tagName("a"));
+	    int count= allLinks.size();
 
 	}
-	@Test
-//Back to iamNeo
-	public void backPage() throws InterruptedException 
-	{
-		 String title ="Get your title";
-		Assert.assertEquals(title, "");
 
+	@Test
+	public void testcase_2() throws InterruptedException 
+      {
+		List<WebElement> allLinks = driver.findElements(By.tagName("a"));
+		for (WebElement link : allLinks) 
+		{
+			System.out.println("Link Text: " + link.getText() + " Link URL: " + link.getAttribute("href"));
+		}
+		
 	}
-	@Test
-//Current URL
-public void currentURL() throws InterruptedException 
-{
-		 String title ="Get your title";
-		Assert.assertEquals(title, "");
-
-}
-
+	
+	     
+		
 	@AfterTest
-	public void afterTest() 
-	{
+	public void afterTest() {
 		driver.quit();
 	}
 
